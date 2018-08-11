@@ -85,7 +85,7 @@ In the Integration Setup for your installation using [the Merchant Interface > I
 
 1. Enable **Payment Response enabled?**
 1. Enter `<wpdisplay item=MC_callback>` as **Payment Response URL**
-1. Enter a random passphrase as **Payment Response password** 
+1. Enter a random passphrase as **Payment Response password**
 1. Enter a random passphrase as **MD5 secret for transactions**
 1. Enter `instId:amount:currency:cartId` as **SignatureFields**
 
@@ -102,7 +102,7 @@ In the Integration Setup for your installation using [the Merchant Interface > I
 ## Not Issue
 
 If **Payment Response password**(also known as`callbackPW`) is incorrect, `InvalidResponseException` is throw to *stop the world*.
-Credit card holders see white screen of death in such case. 
+Credit card holders see white screen of death in such case.
 
 ## Features
 
@@ -133,7 +133,7 @@ Always double check payment status on WorldPay Merchant Interface.
 
 ## Test Sandbox
 
-Use this [test credit](http://support.worldpay.com/support/kb/bg/pdf/181450-test-transaction-f.pdf).
+Use this [test credit card](http://support.worldpay.com/support/kb/bg/pdf/181450-test-transaction-f.pdf).
 
 ## FAQ
 
