@@ -95,7 +95,7 @@ In the Integration Setup for your installation using [the Merchant Interface > I
   * Allow evil hackers to set up fake checkout pages, pretending to be the merchant
   * WorldPay would accept these checkouts and charges the credit cards
   * Money goes into the merchant's account
-- Leaking **Payment Response password** is enough to allow evil hackers to .
+- Leaking **Payment Response password**
   * Allow evil hackers to pretending to be WorldPay
   * WordPress would accept evil hackers' payment callbacks and changes entries' payment statuses
 
