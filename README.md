@@ -79,12 +79,12 @@ The unzipped directory name must be `gf-worldpay`, for example: `wp-content/plug
 
 ## Setup
 
-Payment response(redirection) and [Enhancing security with MD5](http://support.worldpay.com/support/kb/bg/htmlredirect/htmlredirect.htm#rhtml/Enhancing_security_with_MD5.htm%3FTocPath%3D_____10) are mandatory.
+[Payment response(redirection)](http://support.worldpay.com/support/kb/bg/htmlredirect/htmlredirect.htm#rhtml/Telling_your_shopper_about.htm#_Payment_Response_messages) and [Enhancing security with MD5](http://support.worldpay.com/support/kb/bg/htmlredirect/htmlredirect.htm#rhtml/Enhancing_security_with_MD5.htm%3FTocPath%3D_____10) are mandatory.
 
-In the Integration Setup for your installation using [the Merchant Interface > Installations option](http://support.worldpay.com/support/kb/bg/customisingadvanced/custa0000.html):
+In the Integration Setup for your installation using [the Merchant Interface > Installations option](http://support.worldpay.com/support/kb/bg/customisingadvanced/custa6011.html):
 
 1. Enable **Payment Response enabled?**
-1. Enter `<wpdisplay item=MC_callback>` as Payment Response URL
+1. Enter `<wpdisplay item=MC_callback>` as **Payment Response URL**
 1. Enter a random passphrase as **Payment Response password** 
 1. Enter a random passphrase as **MD5 secret for transactions**
 1. Enter `instId:amount:currency:cartId` as **SignatureFields**
@@ -97,11 +97,11 @@ In the Integration Setup for your installation using [the Merchant Interface > I
   * Money goes into the merchant's account
 - Leaking **Payment Response password** is enough to allow evil hackers to .
   * Allow evil hackers to pretending to be WorldPay
-  * WordPress would accept evil hackers' payment callbacks and changes entries' payment status
+  * WordPress would accept evil hackers' payment callbacks and changes entries' payment statuses
 
 ## Not Issue
 
-If `Payment Response password`(also known as`callbackPW`) is incorrect, `InvalidResponseException` is throw to *stop the world*.
+If **Payment Response password**(also known as`callbackPW`) is incorrect, `InvalidResponseException` is throw to *stop the world*.
 Credit card holders see white screen of death in such case. 
 
 ## Features
@@ -146,9 +146,6 @@ See: [https://docs.gravityforms.com/role-management-guide/](https://docs.gravity
 ## Public API
 
 ### Build URL for continuing confirmation
-
-
-TODO
 
 `ConfirmationHandler::buildUrlFor(Entry $entry, int $ttlInSeconds = 3600): string`
 
