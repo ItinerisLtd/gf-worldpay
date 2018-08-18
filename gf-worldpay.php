@@ -18,6 +18,10 @@ if (! defined('WPINC')) {
     die;
 }
 
+if (file_exists(__DIR__ . '/vendor/autoload.php')) {
+    require_once __DIR__ . '/vendor/autoload.php';
+}
+
 /**
  * Begins execution of the plugin.
  *
