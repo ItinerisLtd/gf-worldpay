@@ -8,6 +8,7 @@
         "omnipay/WorldPay": "^3.0"
     },
     "require-dev": {
+        "itinerisltd/preflight-command": "^0.4.0",
         "neronmoon/scriptsdev": "^0.1.2",
         "wp-coding-standards/wpcs": "^1.0"
     },
@@ -17,11 +18,6 @@
         }
     },
     "scripts": {
-        "build": [
-            "rm -fr vendor",
-            "composer install --no-dev --prefer-dist --optimize-autoloader --no-suggest",
-            "composer archive --format=zip --dir=release --file=gf-WorldPay"
-        ],
         "check-style": "phpcs --standard=ruleset.xml --colors -p -s"
     },
     "config": {

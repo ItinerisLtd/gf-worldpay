@@ -55,7 +55,7 @@ class Feed
 
     public function isTest(): bool
     {
-        return (bool) $this->getMeta('isTest', true);
+        return 'production' !== (string) $this->getMeta('isTest');
     }
 
     /**
