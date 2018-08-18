@@ -57,26 +57,6 @@ Gravity forms add-on for WorldPay.
 $ composer require itinerisltd/gf-worldpay
 ```
 
-### Build from Source
-
-```bash
-# Grab the source code
-$ git clone https://github.com/ItinerisLtd/gf-worldpay.git
-$ cd gf-worldpay
-
-# Verify PHP version
-# Your local PHP version must be the same as the remote server one
-$ php -v
-
-$ composer build
-# ...omitted...
-Creating the archive into "release".
-Created: release/gf-worldpay.zip
-```
-
-Then, upload and install `gf-worldpay.zip` as a usual plugin.
-The unzipped directory name must be `gf-worldpay`, for example: `wp-content/plugins/gf-worldpay`.
-
 ## Setup
 
 [Payment response(redirection)](http://support.worldpay.com/support/kb/bg/htmlredirect/htmlredirect.htm#rhtml/Telling_your_shopper_about.htm#_Payment_Response_messages) and [Enhancing security with MD5](http://support.worldpay.com/support/kb/bg/htmlredirect/htmlredirect.htm#rhtml/Enhancing_security_with_MD5.htm%3FTocPath%3D_____10) are mandatory.
@@ -218,6 +198,14 @@ add_filter('gf_worldpay_redirect_url_failure_wp_die', function(bool $shouldWpDie
     return $shouldWpDie; // Undecisive
 }, 10, 4);
 ```
+
+## Preflight
+
+Checker ID: `gf-worldpay-production-mode`
+
+- ensure all gf-worldpay feeds are in production mode
+- this checker can't be disabled
+- this checker has no config options
 
 ## Coding
 

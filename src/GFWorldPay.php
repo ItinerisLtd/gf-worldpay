@@ -6,6 +6,7 @@ namespace Itineris\WorldPay;
 
 use GFAddOn;
 use GFForms;
+use Itineris\WorldPay\Preflight\ProductionMode;
 
 class GFWorldPay
 {
@@ -18,5 +19,7 @@ class GFWorldPay
         GFAddOn::register(AddOn::class);
 
         ConfirmationHandler::init();
+
+        add_action('preflight_checker_collection_register', [ProductionMode::class, 'register']);
     }
 }

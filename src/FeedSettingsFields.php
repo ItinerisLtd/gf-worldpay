@@ -127,15 +127,15 @@ class FeedSettingsFields
                 'label' => esc_html__('Environment', 'gf-worldpay'),
                 'required' => true,
                 'type' => 'radio',
-                'default_value' => true,
+                'default_value' => 'test',
                 'choices' => [
                     [
                         'label' => esc_html__('Production', 'gf-worldpay'),
-                        'value' => false,
+                        'value' => 'production',
                     ],
                     [
                         'label' => esc_html__('Test', 'gf-worldpay'),
-                        'value' => true,
+                        'value' => 'test',
                     ],
                 ],
             ],
