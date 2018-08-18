@@ -1,6 +1,7 @@
 {
     "name": "itinerisltd/gf-worldpay",
     "type": "wordpress-plugin",
+    "description": "Gravity Forms Add-on for WorldPay",
     "license": "proprietary",
     "require": {
         "php": "^7.2",
@@ -8,36 +9,14 @@
         "omnipay/WorldPay": "^3.0"
     },
     "require-dev": {
-        "itinerisltd/preflight-command": "^0.4.0",
-        "neronmoon/scriptsdev": "^0.1.2",
-        "wp-coding-standards/wpcs": "^1.0"
+        "itinerisltd/preflight-command": "^0.4.0"
+    },
+    "config": {
+        "sort-packages": true
     },
     "autoload": {
         "psr-4": {
             "Itineris\\WorldPay\\": "src/"
         }
-    },
-    "scripts": {
-        "check-style": "phpcs --standard=ruleset.xml --colors -p -s"
-    },
-    "config": {
-        "sort-packages": true
-    },
-    "extra": {
-        "scripts-dev": {
-            "post-install-cmd": "phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs",
-            "post-update-cmd": "phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs"
-        }
-    },
-    "archive": {
-        "exclude": [
-            "/*",
-            ".*",
-            "!/src",
-            "!/vendor",
-            "!/LICENSE",
-            "!/README.txt",
-            "!/*.php"
-        ]
     }
 }
