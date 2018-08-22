@@ -1,5 +1,12 @@
 # gf-worldpay
 
+[![Packagist Version](https://img.shields.io/packagist/v/itinerisltd/gf-worldpay.svg)](https://packagist.org/packages/itinerisltd/gf-worldpay)
+[![PHP from Packagist](https://img.shields.io/packagist/php-v/itinerisltd/gf-worldpay.svg)](https://packagist.org/packages/itinerisltd/gf-worldpay)
+[![Packagist Downloads](https://img.shields.io/packagist/dt/itinerisltd/gf-worldpay.svg)](https://packagist.org/packages/itinerisltd/gf-worldpay)
+[![GitHub License](https://img.shields.io/github/license/itinerisltd/gf-worldpay.svg)](https://github.com/ItinerisLtd/gf-worldpay/blob/master/LICENSE)
+[![Hire Itineris](https://img.shields.io/badge/Hire-Itineris-ff69b4.svg)](https://www.itineris.co.uk/contact/)
+
+
 Gravity forms add-on for WorldPay.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -38,20 +45,6 @@ Gravity forms add-on for WorldPay.
 - Gravity Forms v2.3.3.2
 
 ## Installation
-
-### Via Composer (Recommended)
-
-```bash
-# composer.json
-{
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "git@github.com:ItinerisLtd/gf-worldpay.git"
-    }
-  ]
-}
-```
 
 ```bash
 $ composer require itinerisltd/gf-worldpay
@@ -201,11 +194,14 @@ add_filter('gf_worldpay_redirect_url_failure_wp_die', function(bool $shouldWpDie
 
 ## Preflight
 
-Checker ID: `gf-worldpay-production-mode`
+This plugin provides built-in support for [preflight-command](https://github.com/itinerisltd/preflight-command).
+No extra setup steps required.
 
-- ensure all gf-worldpay feeds are in production mode
-- this checker can't be disabled
-- this checker has no config options
+
+Checker ID: `gf-worldpay-production-mode`
+- ensure all gf-worldpay feeds are in production mode (i.e: not in test mode)
+- can't be disabled
+- no config options available
 
 ## Coding
 
@@ -222,3 +218,23 @@ Read the followings before developing:
 ### Gravity Forms
 
 Gravity Forms has undocumented hidden magics, read its source code.
+
+## Author Information
+
+[gf-worldpay](https://github.com/ItinerisLtd/gf-worldpay) is a [Itineris Limited](https://www.itineris.co.uk/) project created by [Tang Rufus](https://typist.tech).
+
+Full list of contributors can be found [here](https://github.com/ItinerisLtd/gf-worldpay/graphs/contributors).
+
+## Feedback
+
+**Please provide feedback!** We want to make this library useful in as many projects as possible.
+Please submit an [issue](https://github.com/ItinerisLtd/gf-worldpay/issues/new) and point out what you do and don't like, or fork the project and make suggestions.
+**No issue is too small.**
+
+## Change log
+
+Please see [CHANGELOG](./CHANGELOG.md) for more information on what has changed recently.
+
+## License
+
+[gf-worldpay](https://github.com/ItinerisLtd/gf-worldpay) is released under the [MIT License](https://opensource.org/licenses/MIT).
