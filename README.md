@@ -15,7 +15,6 @@ Gravity forms add-on for WorldPay.
 
 - [Minimum Requirements](#minimum-requirements)
 - [Installation](#installation)
-  - [Via Composer (Recommended)](#via-composer-recommended)
 - [Setup](#setup)
 - [Security Concerns about WorldPay HTML API](#security-concerns-about-worldpay-html-api)
 - [Not Issue](#not-issue)
@@ -34,6 +33,10 @@ Gravity forms add-on for WorldPay.
 - [Coding](#coding)
   - [Required Reading List](#required-reading-list)
   - [Gravity Forms](#gravity-forms)
+- [Author Information](#author-information)
+- [Feedback](#feedback)
+- [Change log](#change-log)
+- [License](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 

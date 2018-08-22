@@ -1,10 +1,18 @@
 # Change Log
 
-## [0.2.0](https://github.com/ItinerisLtd/gf-worldpay/tree/0.2.0) (2018-08-19)
+## [0.2.1](https://github.com/ItinerisLtd/gf-worldpay/tree/0.2.1) (2018-08-22)
+[Full Changelog](https://github.com/ItinerisLtd/gf-worldpay/compare/0.2.0...0.2.1)
+
+**Merged pull requests:**
+
+- :bike:Bikeshedding for open sourcing [\#6](https://github.com/ItinerisLtd/gf-worldpay/pull/6) ([TangRufus](https://github.com/TangRufus))
+
+## [0.2.0](https://github.com/ItinerisLtd/gf-worldpay/tree/0.2.0) (2018-08-18)
 [Full Changelog](https://github.com/ItinerisLtd/gf-worldpay/compare/0.1.0...0.2.0)
 
 **Merged pull requests:**
 
+- Version bump 0.2.0 [\#4](https://github.com/ItinerisLtd/gf-worldpay/pull/4) ([TangRufus](https://github.com/TangRufus))
 - Add preflight checker; Remove build form source; Fix incorrect fallback to test mode [\#3](https://github.com/ItinerisLtd/gf-worldpay/pull/3) ([TangRufus](https://github.com/TangRufus))
 - Update readme [\#2](https://github.com/ItinerisLtd/gf-worldpay/pull/2) ([TangRufus](https://github.com/TangRufus))
 
