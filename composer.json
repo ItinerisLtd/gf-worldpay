@@ -2,9 +2,32 @@
     "name": "itinerisltd/gf-worldpay",
     "type": "wordpress-plugin",
     "description": "Gravity Forms Add-on for WorldPay",
-    "license": "proprietary",
+    "keywords": [
+        "gravityforms",
+        "payment",
+        "worldpay",
+        "wordpress",
+        "wp"
+    ],
+    "homepage": "https://github.com/ItinerisLtd/gf-worldpay",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Itineris Limited",
+            "email": "hello@itineris.co.uk",
+            "homepage": "https://itineris.co.uk/",
+            "role": "Company"
+        },
+        {
+            "name": "Tang Rufus",
+            "email": "tangrufus@gmail.com",
+            "homepage": "https://typist.tech/",
+            "role": "Developer"
+        }
+    ],
     "require": {
         "php": "^7.2",
+        "ext-curl": "*",
         "league/omnipay": "^3.0",
         "omnipay/WorldPay": "^3.0"
     },
@@ -14,9 +37,27 @@
     "config": {
         "sort-packages": true
     },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.2.x-dev"
+        }
+    },
     "autoload": {
         "psr-4": {
             "Itineris\\WorldPay\\": "src/"
         }
+    },
+    "scripts": {
+        "pretag": [
+            "composer update",
+            "composer normalize",
+            "doctoc README.md",
+            "github_changelog_generator --no-verbose"
+        ]
+    },
+    "support": {
+        "email": "hello@itineris.co.uk",
+        "issues": "https://github.com/ItinerisLtd/gf-worldpay/issues",
+        "source": "https://github.com/ItinerisLtd/gf-worldpay"
     }
 }
