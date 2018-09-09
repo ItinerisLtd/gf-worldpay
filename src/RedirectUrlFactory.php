@@ -20,7 +20,7 @@ class RedirectUrlFactory
 
         $gateway = GatewayFactory::buildFromFeed($feed);
 
-        /* @var PurchaseRequest $request */
+        /* @var PurchaseRequest $request The request instance. */
         $request = $gateway->purchase([
             'amount' => $entry->getProperty('payment_amount'),
             'currency' => $entry->getProperty('currency'),
@@ -30,7 +30,7 @@ class RedirectUrlFactory
             'description' => $feed->getDescription(),
         ]);
 
-        /* @var PurchaseResponse $response */
+        /* @var PurchaseResponse $response The response instance. */
         $response = $request->send();
         $addOn->log_debug(__METHOD__ . '():  PurchaseResponse - ' . $response->getMessage());
 
@@ -65,7 +65,7 @@ class RedirectUrlFactory
             __METHOD__ . '(): Unable to retrieve WorldPay redirect url - ' . $response->getMessage()
         );
 
-        $shouldWpDie = (bool) apply_filters('gf_WorldPay_redirect_url_failure_wp_die', true, $response, $entry, $addOn);
+        $shouldWpDie = (bool) apply_filters('gf_worldpay_redirect_url_failure_wp_die', true, $response, $entry, $addOn);
 
         if (! $shouldWpDie) {
             return;

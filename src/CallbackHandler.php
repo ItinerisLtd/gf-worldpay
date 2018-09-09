@@ -13,7 +13,7 @@ class CallbackHandler
     public static function run(GFPaymentAddOn $addOn): void
     {
         $entry = self::getEntryBySuperglobals($addOn);
-        $feed = $feed = Feed::findByEntry($entry, $addOn);
+        $feed = Feed::findByEntry($entry, $addOn);
         if (empty($feed)) {
             self::wpDieBecauseOfMissingSuperglobal('feed object', $addOn);
         }
@@ -22,7 +22,7 @@ class CallbackHandler
 
         $addOn->log_debug(__METHOD__ . '(): Before completing purchase');
 
-        /* @var CompletePurchaseRequest $request */
+        /* @var CompletePurchaseRequest $request The request instance. */
         $request = $gateway->completePurchase();
         self::logDebug($request, $addOn);
 
@@ -48,7 +48,7 @@ class CallbackHandler
         $addOn->log_debug(__METHOD__ . '(): ' . self::getNextUrl($entry));
         $addOn->log_debug(__METHOD__ . '(): Confirm!');
 
-        wp_redirect(self::getNextUrl($entry));
+        wp_safe_redirect(self::getNextUrl($entry));
         exit;
     }
 
