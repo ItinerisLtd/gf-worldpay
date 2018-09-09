@@ -18,6 +18,16 @@ class Entry
      */
     private $data;
 
+    /**
+     * Entry constructor.
+     *
+     * @param array $data Gravity Forms entry object array.
+     */
+    public function __construct(array $data)
+    {
+        $this->data = $data;
+    }
+
     public static function findByOurTransactionId(string $ourTransactionId, GFPaymentAddOn $addOn): ?self
     {
         $entryId = $addOn->get_entry_by_transaction_id($ourTransactionId);
@@ -28,16 +38,6 @@ class Entry
         }
 
         return new Entry($rawEntry);
-    }
-
-    /**
-     * Entry constructor.
-     *
-     * @param array $data Gravity Forms entry object array.
-     */
-    public function __construct(array $data)
-    {
-        $this->data = $data;
     }
 
     public function markAsProcessing(string $uuid, float $amount): void

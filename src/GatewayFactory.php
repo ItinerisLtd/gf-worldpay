@@ -11,7 +11,7 @@ class GatewayFactory
 {
     public static function buildFromFeed(Feed $feed): Gateway
     {
-        /* @var Gateway $gateway */
+        /* @var Gateway $gateway The gateway instance. */
         $gateway = Omnipay::create('WorldPay');
 
         $gateway->setInstallationId($feed->getInstallationId());
@@ -22,10 +22,5 @@ class GatewayFactory
         $gateway->setFixContact(true);
 
         return $gateway;
-    }
-
-    public static function buildForCallback(string $vendor, bool $param)
-    {
-
     }
 }

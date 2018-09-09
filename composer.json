@@ -32,7 +32,10 @@
         "omnipay/WorldPay": "^3.0"
     },
     "require-dev": {
-        "itinerisltd/preflight-command": "^0.4.0"
+        "automattic/vipwpcs": "^0.3.0",
+        "itinerisltd/preflight-command": "^0.6.1",
+        "roave/security-advisories": "dev-master",
+        "wp-coding-standards/wpcs": "^1.0"
     },
     "config": {
         "sort-packages": true
@@ -48,8 +51,10 @@
         }
     },
     "scripts": {
+        "check-style": "phpcs --colors -p",
         "pretag": [
-            "composer update",
+            "composer update --no-suggest",
+            "@check-style",
             "composer normalize",
             "doctoc README.md",
             "github_changelog_generator --no-verbose"

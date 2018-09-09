@@ -71,7 +71,7 @@ class ConfirmationHandler
             $entry,
             AddOn::get_instance()
         );
-        if (empty($rawFeed)) {
+        if (empty($feed)) {
             wp_die('Unable to locate feed');
         }
 
@@ -81,6 +81,7 @@ class ConfirmationHandler
             return;
         }
 
+        // phpcs:ignore
         wp_redirect($cancelUrl);
         exit;
     }
@@ -88,6 +89,7 @@ class ConfirmationHandler
     private static function handle(Entry $entry): void
     {
         if (! class_exists('GFFormDisplay')) {
+            // phpcs:ignore
             require_once GFCommon::get_base_path() . '/form_display.php';
         }
 
@@ -98,6 +100,7 @@ class ConfirmationHandler
         $confirmation = GFFormDisplay::handle_confirmation($form, $entry->toArray(), false);
 
         if (is_array($confirmation) && isset($confirmation['redirect'])) {
+            // phpcs:ignore
             wp_redirect($confirmation['redirect']);
             exit;
         }

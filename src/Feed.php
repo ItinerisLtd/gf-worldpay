@@ -15,6 +15,16 @@ class Feed
      */
     private $data;
 
+    /**
+     * Feed constructor.
+     *
+     * @param array $data Gravity Forms feed object array.
+     */
+    public function __construct(array $data)
+    {
+        $this->data = $data;
+    }
+
     public static function findByEntry(Entry $entry, GFPaymentAddOn $addOn): ?self
     {
         $rawFeed = $addOn->get_payment_feed(
@@ -26,16 +36,6 @@ class Feed
         }
 
         return new Feed($rawFeed);
-    }
-
-    /**
-     * Feed constructor.
-     *
-     * @param array $data Gravity Forms feed object array.
-     */
-    public function __construct(array $data)
-    {
-        $this->data = $data;
     }
 
     public function getFormId(): int

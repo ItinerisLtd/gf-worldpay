@@ -19,9 +19,10 @@ class FeedSettingsFields
                         'type' => 'text',
                         'class' => 'medium',
                         'required' => true,
-                        'tooltip' => '<h6>' . esc_html__('Name',
-                                'gf-worldpay') . '</h6>' . esc_html__('Enter a feed name to uniquely identify this setup.',
-                                'gf-worldpay'),
+                        'tooltip' => '<h6>' .
+                            esc_html__('Name', 'gf-worldpay') .
+                            '</h6>' .
+                            esc_html__('Enter a feed name to uniquely identify this setup.', 'gf-worldpay'),
                     ],
                 ],
             ],
@@ -39,9 +40,13 @@ class FeedSettingsFields
                         'choices' => $addOn->product_amount_choices(),
                         'required' => true,
                         'default_value' => 'form_total',
-                        'tooltip' => '<h6>' . esc_html__('Payment Amount',
-                                'gf-worldpay') . '</h6>' . esc_html__("Select which field determines the payment amount, or select 'Form Total' to use the total of all pricing fields as the payment amount.",
-                                'gf-worldpay'),
+                        'tooltip' => '<h6>' .
+                            esc_html__('Payment Amount', 'gf-worldpay') .
+                            '</h6>' .
+                            esc_html__(
+                                "Select which field determines the payment amount, or select 'Form Total' to use the total of all pricing fields as the payment amount.",
+                                'gf-worldpay'
+                            ),
                     ],
                 ],
             ],
@@ -56,9 +61,13 @@ class FeedSettingsFields
                         'name' => 'conditionalLogic',
                         'label' => esc_html__('Conditional Logic', 'gf-worldpay'),
                         'type' => 'feed_condition',
-                        'tooltip' => '<h6>' . esc_html__('Conditional Logic',
-                                'gf-worldpay') . '</h6>' . esc_html__('When conditions are enabled, form submissions will only be sent to the payment gateway when the conditions are met. When disabled, all form submissions will be sent to the payment gateway.',
-                                'gf-worldpay'),
+                        'tooltip' => '<h6>' .
+                            esc_html__('Conditional Logic', 'gf-worldpay') .
+                            '</h6>' .
+                            esc_html__(
+                                'When conditions are enabled, form submissions will only be sent to the payment gateway when the conditions are met. When disabled, all form submissions will be sent to the payment gateway.',
+                                'gf-worldpay'
+                            ),
                     ],
                 ],
             ],
@@ -82,8 +91,10 @@ class FeedSettingsFields
                 'label' => esc_html__('Merchant Code', 'gf-worldpay'),
                 'required' => true,
                 'choices' => self::getAllChoices('merchantCode', $addOn),
-                'tooltip' => esc_html__('This specifies which merchant code should receive funds for this payment.',
-                    'gf-worldpay'),
+                'tooltip' => esc_html__(
+                    'This specifies which merchant code should receive funds for this payment.',
+                    'gf-worldpay'
+                ),
             ],
             [
                 'type' => 'select_custom',
@@ -91,10 +102,14 @@ class FeedSettingsFields
                 'label' => esc_html__('Cart ID', 'gf-worldpay'),
                 'required' => true,
                 'choices' => self::getAllChoices('cartId', $addOn),
-                'after_input' => esc_html__('Letters (A-Z and a-z) and Numbers(0-9); Maximum 255 characters',
-                    'gf-worldpay'),
-                'tooltip' => esc_html__('Your own reference number for this purchase. It is returned to you along with the authorisation results by whatever method you have chosen for being informed (email and / or Payment Responses).',
-                    'gf-worldpay'),
+                'after_input' => esc_html__(
+                    'Letters (A-Z and a-z) and Numbers(0-9); Maximum 255 characters',
+                    'gf-worldpay'
+                ),
+                'tooltip' => esc_html__(
+                    'Your own reference number for this purchase. It is returned to you along with the authorisation results by whatever method you have chosen for being informed (email and / or Payment Responses).',
+                    'gf-worldpay'
+                ),
             ],
             [
                 'type' => 'select_custom',
@@ -102,8 +117,10 @@ class FeedSettingsFields
                 'label' => esc_html__('MD5 Secret', 'gf-worldpay'),
                 'required' => true,
                 'choices' => self::getAllChoices('md5Secret', $addOn),
-                'tooltip' => esc_html__('MD5 secret for transactions field in the Integration Setup for your installation using the Merchant Interface > Installations option',
-                    'gf-worldpay'),
+                'tooltip' => esc_html__(
+                    'MD5 secret for transactions field in the Integration Setup for your installation using the Merchant Interface > Installations option',
+                    'gf-worldpay'
+                ),
             ],
 
             [
@@ -112,8 +129,10 @@ class FeedSettingsFields
                 'label' => esc_html__('Payment Response Password', 'gf-worldpay'),
                 'required' => true,
                 'choices' => self::getAllChoices('installationId', $addOn),
-                'tooltip' => esc_html__('This password is used to validate a Payment Notifications message.',
-                    'gf-worldpay'),
+                'tooltip' => esc_html__(
+                    'This password is used to validate a Payment Notifications message.',
+                    'gf-worldpay'
+                ),
             ],
             [
                 'type' => 'text',
@@ -145,8 +164,10 @@ class FeedSettingsFields
                 'label' => esc_html__('Cancel URL', 'gf-worldpay'),
                 'class' => 'large',
                 'after_input' => esc_html__('Leave blank to use Gravity Forms confirmations', 'gf-worldpay'),
-                'tooltip' => esc_html__('Enter the URL the user should be sent to if they cancelled the WorldPay checkout form or payment failed.',
-                    'gf-worldpay'),
+                'tooltip' => esc_html__(
+                    'Enter the URL the user should be sent to if they cancelled the WorldPay checkout form or payment failed.',
+                    'gf-worldpay'
+                ),
             ],
         ];
     }
@@ -172,7 +193,10 @@ class FeedSettingsFields
         }, $uniqueChoices);
 
         return array_merge([
-            ['value' => '', 'label' => 'Select a choice'],
+            [
+                'value' => '',
+                'label' => 'Select a choice',
+            ],
         ], $choices);
     }
 
@@ -184,18 +208,20 @@ class FeedSettingsFields
                 'label' => esc_html__('Customer Information', 'gf-worldpay'),
                 'type' => 'field_map',
                 'field_map' => self::customerInfoFields(),
-                'tooltip' => '<h6>' . esc_html__('Customer Information',
-                        'gf-worldpay') . '</h6>' . esc_html__('Map your Form Fields to the available listed fields.',
-                        'gf-worldpay'),
+                'tooltip' => '<h6>' .
+                    esc_html__('Customer Information', 'gf-worldpay') .
+                    '</h6>' .
+                    esc_html__('Map your Form Fields to the available listed fields.', 'gf-worldpay'),
             ],
             [
                 'name' => 'billingInformation',
                 'label' => esc_html__('Billing Information', 'gf-worldpay'),
                 'type' => 'field_map',
                 'field_map' => self::addressFields(),
-                'tooltip' => '<h6>' . esc_html__('Billing Information',
-                        'gf-worldpay') . '</h6>' . esc_html__('Map your Form Fields to the available listed fields.',
-                        'gf-worldpay'),
+                'tooltip' => '<h6>' .
+                    esc_html__('Billing Information', 'gf-worldpay') .
+                    '</h6>' .
+                    esc_html__('Map your Form Fields to the available listed fields.', 'gf-worldpay'),
             ],
         ];
     }
