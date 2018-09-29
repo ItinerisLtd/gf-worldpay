@@ -1,5 +1,12 @@
 # Change Log
 
+## [0.2.3](https://github.com/ItinerisLtd/gf-worldpay/tree/0.2.3) (2018-09-30)
+[Full Changelog](https://github.com/ItinerisLtd/gf-worldpay/compare/0.2.2...0.2.3)
+
+**Merged pull requests:**
+
+- Use meta type redirection instead of location header [\#11](https://github.com/ItinerisLtd/gf-worldpay/pull/11) ([TangRufus](https://github.com/TangRufus))
+
 ## [0.2.2](https://github.com/ItinerisLtd/gf-worldpay/tree/0.2.2) (2018-09-09)
 [Full Changelog](https://github.com/ItinerisLtd/gf-worldpay/compare/0.2.1...0.2.2)
 
@@ -9,6 +16,7 @@
 
 **Merged pull requests:**
 
+- Version bump 0.2.2 [\#9](https://github.com/ItinerisLtd/gf-worldpay/pull/9) ([TangRufus](https://github.com/TangRufus))
 - Apply code style; Fix some minor bugs along the way [\#8](https://github.com/ItinerisLtd/gf-worldpay/pull/8) ([TangRufus](https://github.com/TangRufus))
 
 ## [0.2.1](https://github.com/ItinerisLtd/gf-worldpay/tree/0.2.1) (2018-08-22)
