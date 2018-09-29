@@ -53,7 +53,7 @@ class RedirectUrlFactory
                     'callback' => $addOn->get_slug(),
                     'transactionId' => $entry->getTransactionId(),
                 ],
-                home_url()
+                home_url('/')
             )
         );
     }
