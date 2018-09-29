@@ -27,7 +27,7 @@ class CallbackHandler
         self::logDebug($request, $addOn);
 
         // Get the response message ready for returning.
-        /* @var CompletePurchaseResponse $response */
+        /* @var CompletePurchaseResponse $response The omnipay response instance. */
         $response = $request->send();
         self::logDebug($response, $addOn);
 
