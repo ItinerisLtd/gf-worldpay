@@ -10,7 +10,7 @@ use Itineris\WorldPay\Preflight\ProductionMode;
 
 class GFWorldPay
 {
-    public const VERSION = '0.2.2';
+    public const VERSION = '0.2.3';
 
     public function run(): void
     {
