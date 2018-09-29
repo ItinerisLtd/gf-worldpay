@@ -48,8 +48,9 @@ class CallbackHandler
         $addOn->log_debug(__METHOD__ . '(): ' . self::getNextUrl($entry));
         $addOn->log_debug(__METHOD__ . '(): Confirm!');
 
-        wp_safe_redirect(self::getNextUrl($entry));
-        exit;
+        $response->confirm(
+            self::getNextUrl($entry)
+        );
     }
 
     private static function getEntryBySuperglobals(GFPaymentAddOn $addOn): Entry
