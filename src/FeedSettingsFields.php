@@ -92,7 +92,7 @@ class FeedSettingsFields
                 'required' => true,
                 'choices' => self::getAllChoices('merchantCode', $addOn),
                 'tooltip' => esc_html__(
-                    'This specifies which merchant code should receive funds for this payment.',
+                    'This specifies which merchant code should receive funds for this payment. Use random string if unsure.',
                     'gf-worldpay'
                 ),
             ],
@@ -107,7 +107,7 @@ class FeedSettingsFields
                     'gf-worldpay'
                 ),
                 'tooltip' => esc_html__(
-                    'Your own reference number for this purchase. It is returned to you along with the authorisation results by whatever method you have chosen for being informed (email and / or Payment Responses).',
+                    'Your own reference number for this purchase. It is returned to you along with the authorisation results by whatever method you have chosen for being informed (email and / or Payment Responses). Use form title if unsure.',
                     'gf-worldpay'
                 ),
             ],
@@ -118,11 +118,10 @@ class FeedSettingsFields
                 'required' => true,
                 'choices' => self::getAllChoices('md5Secret', $addOn),
                 'tooltip' => esc_html__(
-                    'MD5 secret for transactions field in the Integration Setup for your installation using the Merchant Interface > Installations option',
+                    '30-char MD5 secret for transactions field in the Integration Setup for your installation using the Merchant Interface > Installations option',
                     'gf-worldpay'
                 ),
             ],
-
             [
                 'type' => 'select_custom',
                 'name' => 'paymentResponsePassword',
@@ -130,7 +129,7 @@ class FeedSettingsFields
                 'required' => true,
                 'choices' => self::getAllChoices('installationId', $addOn),
                 'tooltip' => esc_html__(
-                    'This password is used to validate a Payment Notifications message.',
+                    'This 25-char password is used to validate a Payment Notifications message.',
                     'gf-worldpay'
                 ),
             ],
