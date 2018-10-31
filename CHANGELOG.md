@@ -1,10 +1,19 @@
 # Change Log
 
-## [0.2.3](https://github.com/ItinerisLtd/gf-worldpay/tree/0.2.3) (2018-09-30)
+## [0.2.4](https://github.com/ItinerisLtd/gf-worldpay/tree/0.2.4) (2018-10-31)
+[Full Changelog](https://github.com/ItinerisLtd/gf-worldpay/compare/0.2.3...0.2.4)
+
+**Merged pull requests:**
+
+- Better instructions and help text [\#14](https://github.com/ItinerisLtd/gf-worldpay/pull/14) ([TangRufus](https://github.com/TangRufus))
+- Remove `CompletePurchaseRequest` & `CompletePurchaseResponse` logging [\#13](https://github.com/ItinerisLtd/gf-worldpay/pull/13) ([TangRufus](https://github.com/TangRufus))
+
+## [0.2.3](https://github.com/ItinerisLtd/gf-worldpay/tree/0.2.3) (2018-09-29)
 [Full Changelog](https://github.com/ItinerisLtd/gf-worldpay/compare/0.2.2...0.2.3)
 
 **Merged pull requests:**
 
+- Version bump 0.2.3 [\#12](https://github.com/ItinerisLtd/gf-worldpay/pull/12) ([TangRufus](https://github.com/TangRufus))
 - Use meta type redirection instead of location header [\#11](https://github.com/ItinerisLtd/gf-worldpay/pull/11) ([TangRufus](https://github.com/TangRufus))
 
 ## [0.2.2](https://github.com/ItinerisLtd/gf-worldpay/tree/0.2.2) (2018-09-09)
