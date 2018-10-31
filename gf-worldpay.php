@@ -3,7 +3,7 @@
  * Plugin Name:     GF WorldPay
  * Plugin URI:      https://www.itineris.co.uk/
  * Description:     WorldPay payment gateway for Gravity Forms
- * Version:         0.2.3
+ * Version:         0.2.4
  * Author:          Itineris Limited
  * Author URI:      https://www.itineris.co.uk/
  * Text Domain:     gf-WorldPay
