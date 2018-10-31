@@ -24,12 +24,10 @@ class CallbackHandler
 
         /* @var CompletePurchaseRequest $request The request instance. */
         $request = $gateway->completePurchase();
-        self::logDebug($request, $addOn);
 
         // Get the response message ready for returning.
         /* @var CompletePurchaseResponse $response The omnipay response instance. */
         $response = $request->send();
-        self::logDebug($response, $addOn);
 
         // Save the final transactionReference against the transaction in the database. It will
         // be needed if you want to capture the payment (for an authorize) or void or refund or
@@ -75,19 +73,6 @@ class CallbackHandler
         $message = 'Unable to get/calculate ' . $noun . ' from superglobals';
         $addOn->log_error(__METHOD__ . '(): ' . $message);
         wp_die(esc_html($message), 'Bad Request', 400);
-    }
-
-    /**
-     * Log WorldPay api object via Gravity Forms logger.
-     *
-     * @param CompletePurchaseRequest|CompletePurchaseResponse $request WorldPay api object.
-     * @param GFPaymentAddOn                                   $addOn   Add-on instance.
-     */
-    private static function logDebug($request, GFPaymentAddOn $addOn): void
-    {
-        $addOn->log_debug(__METHOD__ . '(): Final Transaction Reference - ' . $request->getTransactionReference());
-        $addOn->log_debug(__METHOD__ . '(): Message - ' . $request->getMessage());
-        $addOn->log_debug(__METHOD__ . '(): Data - ' . wp_json_encode($request->getData()));
     }
 
     private static function getNextUrl(Entry $entry): string
