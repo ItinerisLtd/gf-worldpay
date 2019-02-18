@@ -59,6 +59,7 @@ $ composer require itinerisltd/gf-worldpay
 
 In the Integration Setup for your installation using [the Merchant Interface > Installations option](http://support.worldpay.com/support/kb/bg/customisingadvanced/custa6011.html):
 
+1. Enable **Enable the Shopper Response**
 1. Enable **Payment Response enabled?**
 1. Enter `<wpdisplay item=MC_callback>` as **Payment Response URL**
 1. Enter a 25-char random passphrase as **Payment Response password**
@@ -119,7 +120,7 @@ Use this [test credit card](http://support.worldpay.com/support/kb/bg/pdf/181450
 
 Gravity Forms capabilities behave differently on multi-user sites and its documents are incomplete.
 If GF WorldPay is missing on form settings, grant yourself `gf_worldpay` and `gf_worldpay_uninstall` capabilities.
-See: [https://docs.gravityforms.com/role-management-guide/](https://docs.gravityforms.com/role-management-guide/)   
+See: [https://docs.gravityforms.com/role-management-guide/](https://docs.gravityforms.com/role-management-guide/)
 
 ## Public API
 
@@ -167,7 +168,7 @@ After form submit, this plugin sends order information to WorldPay in exchange f
 
 By default, when redirect URL retrieval fails:
 1. Mark entry payment status as `Failed`
-1. [Log](https://docs.gravityforms.com/logging-and-debugging/) the error     
+1. [Log](https://docs.gravityforms.com/logging-and-debugging/) the error
 1. `wp_die` **immediately**
 
 Common failure reasons:
