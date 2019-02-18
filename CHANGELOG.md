@@ -1,10 +1,19 @@
 # Change Log
 
+## [0.2.5](https://github.com/ItinerisLtd/gf-worldpay/tree/0.2.5) (2019-02-18)
+[Full Changelog](https://github.com/ItinerisLtd/gf-worldpay/compare/0.2.4...0.2.5)
+
+**Merged pull requests:**
+
+- Fix composer deprecation warning about uppercase characters [\#17](https://github.com/ItinerisLtd/gf-worldpay/pull/17) ([TangRufus](https://github.com/TangRufus))
+- Readme: Update WorldPay setup instruction [\#16](https://github.com/ItinerisLtd/gf-worldpay/pull/16) ([TangRufus](https://github.com/TangRufus))
+
 ## [0.2.4](https://github.com/ItinerisLtd/gf-worldpay/tree/0.2.4) (2018-10-31)
 [Full Changelog](https://github.com/ItinerisLtd/gf-worldpay/compare/0.2.3...0.2.4)
 
 **Merged pull requests:**
 
+- Version bump 0.2.4 [\#15](https://github.com/ItinerisLtd/gf-worldpay/pull/15) ([TangRufus](https://github.com/TangRufus))
 - Better instructions and help text [\#14](https://github.com/ItinerisLtd/gf-worldpay/pull/14) ([TangRufus](https://github.com/TangRufus))
 - Remove `CompletePurchaseRequest` & `CompletePurchaseResponse` logging [\#13](https://github.com/ItinerisLtd/gf-worldpay/pull/13) ([TangRufus](https://github.com/TangRufus))
 
