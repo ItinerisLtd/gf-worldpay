@@ -18,7 +18,14 @@ class RedirectUrlFactory
             $amount
         );
 
+        // Temporarily reset $_FILES to prevent conflicts with symfony/http-foundation.
+        $originalFiles = $_FILES; // phpcs:ignore
+        $_FILES = [];
+        
         $gateway = GatewayFactory::buildFromFeed($feed);
+        
+        // Restore original $_FILES so that GravityForms saves it.
+        $_FILES = $originalFiles;
 
         /* @var PurchaseRequest $request The request instance. */
         $request = $gateway->purchase([
