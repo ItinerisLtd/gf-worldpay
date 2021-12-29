@@ -28,8 +28,7 @@
     "require": {
         "php": "^7.2",
         "ext-curl": "*",
-        "league/omnipay": "^3.0",
-        "omnipay/worldpay": "dev-cloudflare-support"
+        "league/omnipay": "^3.0"
     },
     "require-dev": {
         "automattic/vipwpcs": "^0.3.0",
